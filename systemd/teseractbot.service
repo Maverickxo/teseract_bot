@@ -1,0 +1,15 @@
+[Unit]
+Description=BOT_Teseract_online
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bot_kraft/teseract_bot/
+ExecStart=/root/bot_kraft/teseract_bot/venv/bin/python3 /root/bot_kraft/teseract_bot/Teseract_online_BOT.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
